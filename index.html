@@ -6,12 +6,30 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>CHIFFRES</title>
         <link rel="stylesheet" type="text/css" href="css/main.css">
-        <script type="module" src="js/crypto-js.min.js" defer></script>
-        <script type="module" src="js/main.js" defer></script>
     </head>
     
-	<body>
-        <a href="translator.html">Crypt/Encrypt</a>
+	<body class="secret">
+        <nav>
+            <a href="translator.html">Crypt/Encrypt</a>
+        </nav>
+        
 
+        <h1>CHIFFRES</h1>
+
+        <p>
+            <label class="label" for="pass-phrase">Pass phrase:</label class="label">
+            <input id="pass-phrase" type="password" name="pass-phrase" maxlength="36" size="36">
+        </p>
+
+        <p class="centered">
+            <button id="decrypt" class="decrypt">DECRYPT</button>
+        </p>
+
+        <textarea id="decrypted-text"></textarea>
+
+
+        <script src="js/crypto-js.min.js"></script>
+        <script src="content/content.js"></script>
+        <script src="js/main.js"></script>
     </body>
 </html>

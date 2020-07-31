@@ -3,7 +3,88 @@ body {
     background: #FFF;
 }
 
+h1 {
+    margin: 10px 0;
+}
 
+nav {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    padding: 7px 15px;
+    background: skyblue;
+    transition: all 0.35s;
+}
+
+nav a::before {
+    content: "> ";
+}
+
+nav a.homelink::before {
+    content: "< ";
+}
+
+nav a:hover {
+    color: #FFF;
+    background: darkblue;
+}
+
+button {
+    cursor: pointer;
+    margin: 15px 0;
+    font-weight: bold;
+    color: #FFF;
+    border: none;
+    padding: 6px 9px;
+    border-radius: 7px;
+    background: #000;
+    transition: all 0.35s;
+}
+
+button.encrypt {
+    background: firebrick;
+}
+
+button.decrypt {
+    background: darkgreen;
+}
+
+button:hover {
+    filter: saturate(5);
+    transform: scale(1.2);
+}
+
+/* SECRET */
+
+body.secret {
+    margin: 0;
+    padding: 2vh 0;
+    font: 12px monospace;
+    color: #333;
+    height: 100vh;
+    text-align: center;
+}
+.secret textarea {
+    width: 50vw;
+    height: 50vh;
+    margin: 0 auto;
+    padding: 10px;
+    /* border: none; */
+    resize: none;
+}
+
+.secret textarea::scrollbar {
+  display: none;
+}
+
+/* TRANSLATOR */
 
 body.translator {
     display: flex;
@@ -49,31 +130,6 @@ body.translator {
 .translator textarea, .translator input {
     border: 1px solid #666;
     border-radius: 3px;
-}
-
-.translator button {
-    cursor: pointer;
-    margin: 15px;
-    font-weight: bold;
-    color: #FFF;
-    border: none;
-    padding: 6px 9px;
-    border-radius: 7px;
-    background: #000;
-    transition: all 0.35s;
-}
-
-.translator .encrypt button {
-    background: firebrick;
-}
-
-.translator .decrypt button {
-    background: darkgreen;
-}
-
-.translator button:hover {
-    filter: saturate(5);
-    transform: scale(1.2);
 }
 
 .translator .centered {

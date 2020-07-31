@@ -1,0 +1,88 @@
+body {
+    font: medium monospace, Arial;
+    background: #FFF;
+}
+
+
+
+body.translator {
+    display: flex;
+    height: 85vh;
+}
+
+.translator .block {
+    flex-basis: 50%;
+    margin: 2.5vh 0;
+    height: 95vh;
+    text-align: center;
+}
+
+.translator .block:nth-child(1) {
+    border-right: 1px solid #000;
+}
+
+.translator .block:nth-child(2) {
+    border-left: 1px solid #000;
+}
+
+.translator .label {
+    color: #333;
+    font-weight: bold;
+}
+
+.translator h2 {
+    color: #333;
+    font-size: xx-large;
+    margin: 0;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.translator textarea {
+    display: block;
+    margin: 1em auto;
+    width: 90%;
+    height: 25vh;
+}
+
+.translator textarea, .translator input {
+    border: 1px solid #666;
+    border-radius: 3px;
+}
+
+.translator button {
+    cursor: pointer;
+    margin: 15px;
+    font-weight: bold;
+    color: #FFF;
+    border: none;
+    padding: 6px 9px;
+    border-radius: 7px;
+    background: #000;
+    transition: all 0.35s;
+}
+
+.translator .encrypt button {
+    background: firebrick;
+}
+
+.translator .decrypt button {
+    background: darkgreen;
+}
+
+.translator button:hover {
+    filter: saturate(5);
+    transform: scale(1.2);
+}
+
+.translator .centered {
+    text-align: center;
+}
+
+.translator hr {
+    color: #000;
+    border: none;
+    border-top: 2px dashed #999;
+    margin: 2.5em 0 1.5em;
+}

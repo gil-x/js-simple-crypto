@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>TRANSLATOR</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+    </head>
+    
+	<body class="translator">
+        <div class="block encrypt">
+            <h2>Crypt</h2>
+            <p>
+                <label class="label" for="text-to-encrypt">Text to encrypt:</label>
+                <textarea id="text-to-encrypt" name="text-to-encrypt"></textarea>
+            </p>
+            <p>
+                <label class="label" for="pass-phrase1">Pass phrase:</label class="label">
+                <input id="pass-phrase1" type="text" name="pass-phrase1" maxlength="36" size="36">
+            </p>
+            <p class="centered">
+                <button class="encrypt" onclick="encrypt()">ENCRYPT</button>
+            </p>
+            <hr>
+            <p>
+                <p class="label">Encrypted:</p class="label">
+                <textarea id="encrypted"></textarea>
+            </p> 
+        </div>
+
+        <div class="block decrypt">
+            <h2>Decrypt</h2>
+            <p>
+                <label class="label" for="text-to-decrypt">Text to decrypt:</label class="label">
+                <textarea id="text-to-decrypt" name="text-to-decrypt" rows="5" cols="33"></textarea>
+            </p>
+            <p>
+                <label class="label" for="pass-phrase2">Pass phrase:</label class="label">
+                <input id="pass-phrase2" type="text" name="pass-phrase2" maxlength="36" size="36">
+            </p>
+            <p class="centered">
+                <button class="decrypt" onclick="decrypt()">DECRYPT</button>
+            </p>
+            <hr>
+            <p>
+                <p class="label">Decrypted:</p class="label">
+                <textarea id="decrypted"></textarea>
+            </p>
+        </div>
+
+        <script src="js/crypto-js.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
